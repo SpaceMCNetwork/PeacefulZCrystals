@@ -38,7 +38,7 @@ dependencies {
     modImplementation(include("eu.pb4","polymer-resource-pack","0.9.17+1.21.1"))
     modImplementation(include("eu.pb4","polymer-virtual-entity","0.9.17+1.21.1"))
     modImplementation("net.fabricmc.fabric-api:fabric-api:0.107.0+1.21.1")
-    modImplementation("com.cobblemon:fabric:1.6.1+1.21.1")
+    modImplementation("com.cobblemon:fabric:1.7.0+1.21.1")
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.8.1")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.8.1")
 
