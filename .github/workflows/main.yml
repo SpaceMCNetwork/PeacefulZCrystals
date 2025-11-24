@@ -1,14 +1,16 @@
-name: Build & Publish Mod
+name: Build Mod
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - master
 
 jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
       contents: read
-      packages: write
 
     steps:
       - uses: actions/checkout@v4
@@ -18,8 +20,6 @@ jobs:
         with:
           distribution: temurin
           java-version: "21"
-          server-id: github
-          settings-path: ${{ github.workspace }}
 
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v3
@@ -35,9 +35,3 @@ jobs:
         with:
           name: PeacefulZCrystals
           path: build/libs/*.jar
-
-      - name: Publish to GitHub Packages
-        run: ./gradlew publish
-        env:
-          USERNAME: ${{ github.actor }}
-          TOKEN: ${{ secrets.GITHUB_TOKEN }}
