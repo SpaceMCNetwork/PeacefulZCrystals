@@ -1,7 +1,7 @@
 plugins {
     id("java")
-    id("dev.architectury.loom") version("1.7.462")
-    id("architectury-plugin") version("3.4-SNAPSHOT")
+    id("dev.architectury.loom") version("1.6.378")
+    id("architectury-plugin") version("3.4.162")
     kotlin("jvm") version("2.0.0")
 }
 
